@@ -32,16 +32,17 @@ function calculateResult(calculationType) {
     calculationType !== "ADD" &&
     calculationType !== "SUBTRACT" &&
     calculationType !== "MULTIPLY" &&
-    calculationType !== "DIVIDE"
+    calculationType !== "DIVIDE" ||
+    enteredNumber===0
   ) {
     return;
   }
 
   if (
     calculationType === "ADD" ||
-    calculationType == "SUBTRACT" ||
-    calculationType == "MULTIPLY" ||
-    calculationType == "DIVIDE"
+    calculationType === "SUBTRACT" ||
+    calculationType === "MULTIPLY" ||
+    calculationType === "DIVIDE"
   ) {
     const enteredNumber = getUserNumberInput();
     const initialResult = currentResult;
